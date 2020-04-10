@@ -6,13 +6,13 @@ Karaoker smaaaash videos from YouTube (and make karaokee)
 Just use PIP
 
 ```
-pip3 install https://github.com/vukasin/karaoker.git
+pip3 install git+https://github.com/vukasin/karaoker.git
 ```
 
 If you get permission issues, you can try installing it to a user dir.
 
 ```
-pip3 install --user https://github.com/vukasin/karaoker.git
+pip3 install --user git+https://github.com/vukasin/karaoker.git
 ```
 
 

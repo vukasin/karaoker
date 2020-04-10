@@ -37,7 +37,7 @@ setup(
     packages=['karaoker'],
     python_requires='>=3.6, <3.8',
     include_package_data=True,
-    install_requires=["youtube-dl", "spleeter"],
+    install_requires=["youtube-dl", "spleeter", "tqdm"],
     entry_points={
         'console_scripts': ['karaoker=karaoker.__main__:entrypoint']
     },
