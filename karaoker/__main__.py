@@ -50,6 +50,10 @@ def process(url):
         separator.separate_to_file(tmpfile, "output",
                                    codec="mp3",
                                    bitrate="196k")
+        os.rename(tmpfile, os.path.join("output", fname, "complete.m4a"))
+        os.rename(os.path.join("output", fname, "accompaniment.mp3"),
+                  os.path.join("output", fname, fname + ".mp3"))
+
     finally:
         if os.path.exists(tmpfile):
             os.unlink(tmpfile)
