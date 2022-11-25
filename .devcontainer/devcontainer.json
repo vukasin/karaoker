@@ -1,0 +1,36 @@
+{
+	"name": "Karaoker Develop",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"settings": {
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true
+	},
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		8888,
+		8890,
+		9080,
+		9081,
+		9443,
+		6006,
+		3000
+	],
+	"runArgs": [
+		"-e",
+		"NVIDIA_DISABLE_REQUIRE=true",
+		"--gpus=all"
+	],
+	"containerEnv": {
+		"PYTHONPATH": "/workspaces/karaoker"
+	},
+	"remoteUser": "dev",
+	"features": {
+	},
+	"onCreateCommand": "python /workspaces/karaoker/setup.py develop"
+}
